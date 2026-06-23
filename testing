@@ -1,10 +1,10 @@
 ---
-- name: Remove Git
+- name: Install Git
   hosts: Appserver
   become: yes
 
   tasks:
-    - name: Remove Git package
+    - name: Install Git package
       package:
         name: git
-        state: absent
+        state: present
